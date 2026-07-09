@@ -339,12 +339,14 @@ export default function UserFlowForm() {
         <div className="text-center space-y-4">
           <div className="flex justify-start mb-4">
             {/* Logo de AS&Servicios.com */}
-            <img
-              src="/logo_blue.png"
-              alt="AS&Servicios.com"
-              className="h-20 w-auto object-contain"
-              onError={(e) => { e.target.style.display = 'none'; }} // Oculta si no está la imagen aún
-            />
+            <a href="https://asyservicios.com" target="_blank" rel="noopener noreferrer" className="inline-block transition-transform hover:scale-105">
+              <img
+                src="/logo_blue.png"
+                alt="AS&Servicios.com"
+                className="h-20 w-auto object-contain"
+                onError={(e) => { e.target.style.display = 'none'; }} // Oculta si no está la imagen aún
+              />
+            </a>
           </div>
           <span className="px-3 py-1 bg-indigo-100 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300 rounded-full text-xs font-bold uppercase tracking-wider">
             Herramienta Interactiva de Requisitos
@@ -841,18 +843,18 @@ export default function UserFlowForm() {
               <p className="text-slate-600 dark:text-slate-400 mb-6 pl-14">
                 Estás a punto de borrar permanentemente todos los datos, flujos y bocetos. Esta acción no se puede deshacer.
               </p>
-              <div className="flex justify-end gap-3">
+              <div className="grid grid-cols-2 gap-4 max-w-sm mx-auto mt-8">
                 <button
                   type="button"
                   onClick={() => setShowClearModal(false)}
-                  className="px-4 py-2 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-lg font-medium transition-colors cursor-pointer"
+                  className="px-4 py-2 text-slate-700 dark:text-slate-300 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 rounded-lg font-medium transition-colors cursor-pointer text-center"
                 >
                   Cancelar
                 </button>
                 <button
                   type="button"
                   onClick={confirmClear}
-                  className="px-4 py-2 bg-rose-600 hover:bg-rose-700 text-white rounded-lg font-medium transition-colors shadow-sm cursor-pointer"
+                  className="px-4 py-2 bg-rose-600 hover:bg-rose-700 text-white rounded-lg font-medium transition-colors shadow-sm cursor-pointer text-center"
                 >
                   Sí, vaciar datos
                 </button>
